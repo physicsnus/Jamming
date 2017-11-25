@@ -1,0 +1,7 @@
+Note:
+I have difficulty writing the fetch() to interface with the Spotify API. My app is working fine with hardcoded tracks, but fail when trying to get the track from Spotify.
+
+Will you be able to help rectifying the problem? Thank you.
+
+Link to the jammming feature request:
+https://docs.google.com/document/d/1wZ1qF6g9J93NIeIuoQAUL5mfl5ipdhzVv6wNPSQtegE/edit?usp=sharing

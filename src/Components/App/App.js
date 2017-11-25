@@ -62,6 +62,7 @@ export class App extends Component {
 
   savePlaylist() {
     Spotify.savePlaylist(this.state.playlistName, this.state.playlistTracks);
+    window.alert("The playlist has been saved!");
   }
 
   search(searchTerm) {

@@ -8,6 +8,13 @@ export class Playlist extends Component{
     super(props);
 
     this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEnter = this.handleEnter.bind(this);
+  }
+
+  handleEnter(e) {
+    if (e.key === "Enter") {
+      this.props.onSave();
+    }
   }
 
   handleNameChange(e) {
@@ -17,10 +24,10 @@ export class Playlist extends Component{
   render() {
     return(
       <div className="Playlist">
-        <input defaultValue={this.props.playlistName} onChange={this.handleNameChange}/>
+        <input type="text" placeholder={this.props.playlistName} onChange={this.handleNameChange} onKeyPress={this.handleEnter}/>
         <Tracklist tracks={this.props.playlistTracks} isRemoval="-" onRemove={this.props.onRemove}/>
         <a className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</a>
       </div>
-    );
+    )
   }
 }
