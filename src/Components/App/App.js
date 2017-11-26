@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {SearchBar} from "../SearchBar/SearchBar.js";
 import {SearchResults} from "../SearchResults/SearchResults.js";
 import {Playlist} from "../Playlist/Playlist.js";
-import Spotify from "../../util/Spotify.js";
+//import Spotify from "../../util/Spotify.js";
+//import Spotify2 from "../../util/Spotify2.js";
+import Spotify3 from "../../util/Spotify3.js";
 
 import './App.css';
 
@@ -61,12 +63,12 @@ export class App extends Component {
   }
 
   savePlaylist() {
-    Spotify.savePlaylist(this.state.playlistName, this.state.playlistTracks);
+    Spotify3.savePlaylist(this.state.playlistName, this.state.playlistTracks);
     window.alert("The playlist has been saved!");
   }
 
   search(searchTerm) {
-    Spotify.search(searchTerm).then(item => {
+    Spotify3.search(searchTerm).then(item => {
       this.setState({searchResults: item});
     });
 
